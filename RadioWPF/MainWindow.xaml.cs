@@ -22,7 +22,6 @@ namespace RadioWPF
     public partial class MainWindow : Window
     {
         private Radio _radio;
-        string _radioText;
 
         public MainWindow()
         {
@@ -33,8 +32,7 @@ namespace RadioWPF
         private void TurnOff(object sender, RoutedEventArgs e)
         {
             _radio.TurnOff();
-            _radioText = _radio.Play(); 
-            radioText.Content = _radioText;
+            radioText.Content = _radio.Play();
 
         }
 
@@ -42,14 +40,27 @@ namespace RadioWPF
         {
             _radio.TurnOn();
             _radio.Channel = 4;
-            _radioText = _radio.Play();
-            radioText.Content = _radioText;
-
+            radioText.Content = _radio.Play();
         }
 
-        private void numberB_TextChanged(object sender, TextChangedEventArgs e)
+        private void Increase_Click(object sender, RoutedEventArgs e)
         {
-
+            _radio.VolumeUp();
+            var volumestring = Convert.ToString(_radio._volume);
+            Volume.Content = $"Volume: {volumestring}";
         }
+
+        private void Decrease_Click(object sender, RoutedEventArgs e)
+        {
+            _radio.VolumeDown();
+            var volumestring = Convert.ToString(_radio._volume);
+            Volume.Content = $"Volume: {volumestring}";
+        }
+
+        //Select Channels
+        //Volume Slider maybe
+        //Play button need to be implemented
+
+
     }
 }

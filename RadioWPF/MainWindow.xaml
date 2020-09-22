@@ -11,6 +11,15 @@
         <Button Content="Turn On" HorizontalAlignment="Left" Margin="401,180,0,0" VerticalAlignment="Top" Click="TurnOn" Height="30" Width="76"/>
         <Button Content="Turn Off" HorizontalAlignment="Left" Margin="400,240,0,0" VerticalAlignment="Top" Click="TurnOff" Height="31" Width="77"/>
         <Label Content="Radio is Off&#xD;&#xA;"  Name ="radioText" HorizontalContentAlignment="Center" FontSize="26" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Height="81" Width="288"/>
-
+        <StackPanel Orientation="Vertical"
+		VerticalAlignment="Top" Height="113" Margin="477,199,147,0">
+            <Button x:Name="Increase" Height="32" Width="117" Click="Increase_Click">
+                <Image Source="https://static.thenounproject.com/png/645446-200.png" Height="20" Width="28"  />
+            </Button>
+            <Button x:Name="Decrease" Width="117" Height="36" Click="Decrease_Click" >
+                <Image Source="https://image.flaticon.com/icons/png/512/7/7524.png" Height="20" Width="28" />
+            </Button>
+        </StackPanel>
+        <Label Name="Volume" FontSize="24" HorizontalContentAlignment="Center" Content="Volume&#xD;&#xA; " HorizontalAlignment="Left" Margin="500,125,0,0" VerticalAlignment="Top" Height="54" Width="123"/>
     </Grid>
 </Window>

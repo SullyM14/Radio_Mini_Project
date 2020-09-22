@@ -6,8 +6,10 @@ namespace RadioApp
     {
         // implement a class Radio that corresponds to the Class diagram 
         //   and specification in the Radio_Mini_Project document
-        protected int _channel =1;
+        private int _channel =1;
         private bool _on;
+        public int _volume { get; set; }
+
 
         public int Channel {
             get { return _channel;}
@@ -15,13 +17,8 @@ namespace RadioApp
             {
                 if (_on == true)
                 {
-                    if (value < 1 || value > 4)
+                    if (value >= 1 && value <= 4)
                     {
-
-                    }
-                    else
-                    {
-                        // Channel = value;
                         _channel = value;
                     }
                 }
@@ -48,18 +45,29 @@ namespace RadioApp
 
         public void TurnOff()
         {
-            if( _on == true)
-            {
                 _on = false;
-                _channel = 1;
-            }
-            // throw new NotImplementedException();
         }
 
         public void TurnOn()
         {
                 _on = true;
 
+        }
+
+        public void VolumeUp()
+        {
+            if (_volume <= 100)
+            {
+                _volume++;
+            }
+        }
+
+        public void VolumeDown()
+        {
+            if (_volume >0)
+            {
+                _volume--;
+            }
         }
     }
 }

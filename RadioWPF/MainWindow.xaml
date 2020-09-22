@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="RadioWPF" Height="450" Width="800">
     <Grid>
-        
+        <Label FontSize="32" HorizontalContentAlignment="Center" Content="Radio&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Height="54" Width="216"/>
+        <Button Content="Turn On" HorizontalAlignment="Left" Margin="401,180,0,0" VerticalAlignment="Top" Click="TurnOn" Height="30" Width="76"/>
+        <Button Content="Turn Off" HorizontalAlignment="Left" Margin="400,240,0,0" VerticalAlignment="Top" Click="TurnOff" Height="31" Width="77"/>
+        <Label Content="Radio is Off&#xD;&#xA;"  Name ="radioText" HorizontalContentAlignment="Center" FontSize="26" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Height="81" Width="288"/>
+
     </Grid>
 </Window>
